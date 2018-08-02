@@ -384,7 +384,7 @@ def load_stopwords (stop_file):
         with open(stop_path, "r") as f:
             for line in f.readlines():
                 stopwords.add(line.strip().lower())
-    except FileNotFoundError:
+    except IOError:
         pass
 
     return stopwords
