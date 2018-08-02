@@ -305,7 +305,7 @@ def build_graph (json_iter):
                     graph.add_node(word_id)
 
             try:
-                graph.edge[pair[0]][pair[1]]["weight"] += 1.0
+                graph.adj[pair[0]][pair[1]]["weight"] += 1.0
             except KeyError:
                 graph.add_edge(pair[0], pair[1], weight=1.0)
 
