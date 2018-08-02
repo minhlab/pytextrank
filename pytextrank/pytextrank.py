@@ -222,7 +222,7 @@ def parse_graf (doc_id, graf_text, base_idx, spacy_nlp=None):
                 pos_family = '.'
                 word = word._replace(pos=pos_family)
             else:
-                pos_family = tok_tag.lower()[0]
+                pos_family = tok_tag.lower()[0] if tok_tag else ''
 
             if pos_family in POS_LEMMA:
                 # can lemmatize this word?
